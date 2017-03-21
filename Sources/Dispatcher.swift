@@ -13,7 +13,7 @@ public final class Dispatcher<S: Store> {
     public typealias AsyncActionCallback = ((S) -> Action) -> ()
     public typealias AsyncActionCreator = (S, @escaping AsyncActionCallback) -> ()
     
-    private let store: S
+    private weak var store: S!
     
     private let lock = NSLock()
     

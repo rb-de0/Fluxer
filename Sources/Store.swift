@@ -6,4 +6,4 @@
 //  Copyright © 2017年 rb_de0. All rights reserved.
 //
 
-public protocol Store {}
+public protocol Store: class {}
