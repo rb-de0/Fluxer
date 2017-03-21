@@ -1,0 +1,8 @@
+language: objective-c
+osx_image: xcode8.2
+
+before_install:
+- bundle install --path .bundle
+
+script:
+- bundle exe fastlane test
