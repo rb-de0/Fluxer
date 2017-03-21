@@ -171,4 +171,34 @@ class DispatcherTests: XCTestCase {
         
         XCTAssertEqual(store.value, 10)
     }
+    
+    func testUnregister() {
+        
+        let store = TestStore()
+        let dispatcher = Dispatcher(store: store)
+        
+        let token = dispatcher.register { action, _ in
+            
+            switch action {
+            case _ as TestAction:
+                store.value = 10
+                
+            case _ as Test2Action:
+                store.value = -1
+                
+            default:
+                break
+            }
+        }
+        
+        dispatcher.dispatch(TestAction())
+        
+        XCTAssertEqual(store.value, 10)
+        
+        dispatcher.unregister(registrationToken: token)
+        
+        dispatcher.dispatch(Test2Action())
+        
+        XCTAssertEqual(store.value, 10)
+    }
 }
