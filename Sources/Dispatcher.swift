@@ -17,7 +17,7 @@ public final class Dispatcher<S: Store> {
     
     private let lock = NSLock()
     
-    private var actionHandlers = [String: ActionHandler<S>]()
+    private var actionHandlers = [ActionHandler<S>]()
     
     private var isDispatching = false
     
@@ -36,7 +36,7 @@ public final class Dispatcher<S: Store> {
         
         startDispatch()
         
-        actionHandlers.values.forEach { handler in
+        actionHandlers.forEach { handler in
             invokeActionHandler(handler: handler, action: action)
         }
         
@@ -64,7 +64,7 @@ public final class Dispatcher<S: Store> {
         
         for registrationToken in registrationTokens {
             
-            guard let handler = actionHandlers[registrationToken] else {
+            guard let handler = actionHandlers.filter ({ $0.registrationToken == registrationToken }).first else {
                 return
             }
             
@@ -81,21 +81,21 @@ public final class Dispatcher<S: Store> {
     public func register(_ handler: @escaping (Action, S) -> ()) -> String {
         
         let registrationToken = generateRegistrationToken()
-        actionHandlers[registrationToken] = ActionHandler(handler, .waiting)
+        actionHandlers.append(ActionHandler(registrationToken, handler, .waiting))
         
         return registrationToken
     }
     
     public func unregister(registrationToken: String) {
         
-        actionHandlers[registrationToken] = nil
+        actionHandlers = actionHandlers.filter { $0.registrationToken != registrationToken }
     }
     
     // MARK: - Private
     
     private func startDispatch() {
         
-        actionHandlers.values.forEach {
+        actionHandlers.forEach {
             $0.status = .waiting
         }
         

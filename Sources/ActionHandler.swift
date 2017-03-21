@@ -8,10 +8,12 @@
 
 class ActionHandler<S: Store> {
     
+    let registrationToken: String
     let handleFunc: (Action, S) -> ()
     var status: DispatchStatus
     
-    init(_ handleFunc: @escaping (Action, S) -> (), _ status: DispatchStatus) {
+    init(_ registrationToken: String, _ handleFunc: @escaping (Action, S) -> (), _ status: DispatchStatus) {
+        self.registrationToken = registrationToken
         self.handleFunc = handleFunc
         self.status = status
     }
