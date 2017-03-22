@@ -141,7 +141,7 @@ disposeBag = DisposeBag() // dispose
 ## Future Improvement
 
 - Docs
-- Test Coverage
+- CocoaPods
 
 ## Author
 

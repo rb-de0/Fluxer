@@ -12,7 +12,7 @@ platform :ios do
     )
     slather(
       proj: "Fluxer.xcodeproj",
-      scheme: "Fluxer-Example",
+      scheme: "Fluxer",
       source_directory: "Sources",
       output_directory: "report",
       coveralls: true
