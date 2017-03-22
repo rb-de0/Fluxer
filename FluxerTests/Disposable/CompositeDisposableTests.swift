@@ -65,4 +65,30 @@ class CompositeDisposableTests: XCTestCase {
         
         XCTAssertEqual(calledCount, 3)
     }
+    
+    func testSingleAppendOperator() {
+        
+        var calledCount = 0
+        
+        let compositeDisposable = CompositeDisposable()
+        
+        compositeDisposable += BlockDisposable{ calledCount += 1 }
+        
+        compositeDisposable.dispose()
+        
+        XCTAssertEqual(calledCount, 1)
+    }
+    
+    func testMultipleAppendOperator() {
+        
+        var calledCount = 0
+        
+        let compositeDisposable = CompositeDisposable()
+        
+        compositeDisposable += [BlockDisposable{ calledCount += 1 }, BlockDisposable{ calledCount += 1 }]
+        
+        compositeDisposable.dispose()
+        
+        XCTAssertEqual(calledCount, 2)
+    }
 }

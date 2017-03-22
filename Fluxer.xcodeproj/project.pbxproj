@@ -21,7 +21,6 @@
 		18D395321E80F3B30068E37D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395291E80F3650068E37D /* Action.swift */; };
 		18D395331E80F3B50068E37D /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3952A1E80F3650068E37D /* Dispatcher.swift */; };
 		18D395351E80F3BB0068E37D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3952C1E80F3650068E37D /* Store.swift */; };
-		18D395371E80F3C80068E37D /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395361E80F3C80068E37D /* MainStore.swift */; };
 		18D395391E80F3E30068E37D /* DispatchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395381E80F3E30068E37D /* DispatchStatus.swift */; };
 		18D3953B1E80F3FC0068E37D /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3953A1E80F3FC0068E37D /* ActionHandler.swift */; };
 		18D3953E1E8104980068E37D /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3953D1E8104980068E37D /* ObservableValue.swift */; };
@@ -95,7 +94,6 @@
 		18D395291E80F3650068E37D /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		18D3952A1E80F3650068E37D /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		18D3952C1E80F3650068E37D /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		18D395361E80F3C80068E37D /* MainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		18D395381E80F3E30068E37D /* DispatchStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchStatus.swift; sourceTree = "<group>"; };
 		18D3953A1E80F3FC0068E37D /* ActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
 		18D3953D1E8104980068E37D /* ObservableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 				18D394E01E80F2440068E37D /* Main.storyboard */,
 				18D394E31E80F2440068E37D /* Info.plist */,
 				18D394E61E80F2440068E37D /* ViewController.swift */,
-				18D395361E80F3C80068E37D /* MainStore.swift */,
 			);
 			path = "Fluxer-Example";
 			sourceTree = "<group>";
@@ -401,7 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D394F01E80F2440068E37D /* ViewController.swift in Sources */,
-				18D395371E80F3C80068E37D /* MainStore.swift in Sources */,
 				18D394E81E80F2440068E37D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,6 +688,7 @@
 				18D394CE1E80D8FB0068E37D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D395201E80F31F0068E37D /* Build configuration list for PBXNativeTarget "Fluxer" */ = {
 			isa = XCConfigurationList;
@@ -700,6 +697,7 @@
 				18D395221E80F31F0068E37D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D395231E80F31F0068E37D /* Build configuration list for PBXNativeTarget "FluxerTests" */ = {
 			isa = XCConfigurationList;
@@ -708,6 +706,7 @@
 				18D395251E80F31F0068E37D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

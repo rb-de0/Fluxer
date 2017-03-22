@@ -11,6 +11,12 @@ import XCTest
 
 class ObservableValueTests: XCTestCase {
     
+    func testGetterAndSetter() {
+        let value = ObservableValue(0)
+        value.value = 10
+        XCTAssertEqual(value.value, 10)
+    }
+    
     func testSubscribe() {
         
         var bindableValue = 0
