@@ -21,6 +21,14 @@ Swift Flux Framework
 github "rb-de0/Fluxer"
 ```
 
+### CocoaPods
+
+Fluxer is available through CocoaPods. To install it, simply add the following line to your Podfile:
+
+```
+pod 'Fluxer'
+```
+
 ## Usage
 
 ### Store
