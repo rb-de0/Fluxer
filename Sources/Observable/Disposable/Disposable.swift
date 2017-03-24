@@ -10,7 +10,7 @@ public protocol Disposable {
     func dispose()
 }
 
-extension Disposable {
+public extension Disposable {
     
     func addTo(_ disposeBag: DisposeBag) {
         disposeBag.append(self)

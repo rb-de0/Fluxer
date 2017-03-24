@@ -10,6 +10,8 @@ public final class DisposeBag {
     
     private var disposables = [Disposable]()
     
+    public init() {}
+    
     func append(_ disposable: Disposable) {
         disposables.append(disposable)
     }
