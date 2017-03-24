@@ -47,13 +47,6 @@
 			remoteGlobalIDString = 18D395081E80F31F0068E37D;
 			remoteInfo = Fluxer;
 		};
-		18D395151E80F31F0068E37D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18D394B21E80D8FB0068E37D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18D394B91E80D8FB0068E37D;
-			remoteInfo = "Fluxer-Example";
-		};
 		18D3951C1E80F31F0068E37D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 18D394B21E80D8FB0068E37D /* Project object */;
@@ -312,7 +305,6 @@
 			);
 			dependencies = (
 				18D395141E80F31F0068E37D /* PBXTargetDependency */,
-				18D395161E80F31F0068E37D /* PBXTargetDependency */,
 			);
 			name = FluxerTests;
 			productName = FluxerTests;
@@ -340,7 +332,6 @@
 					18D395101E80F31F0068E37D = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 18D394B91E80D8FB0068E37D;
 					};
 				};
 			};
@@ -443,11 +434,6 @@
 			isa = PBXTargetDependency;
 			target = 18D395081E80F31F0068E37D /* Fluxer */;
 			targetProxy = 18D395131E80F31F0068E37D /* PBXContainerItemProxy */;
-		};
-		18D395161E80F31F0068E37D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 18D394B91E80D8FB0068E37D /* Fluxer-Example */;
-			targetProxy = 18D395151E80F31F0068E37D /* PBXContainerItemProxy */;
 		};
 		18D3951D1E80F31F0068E37D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -651,7 +637,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reb-dev.FluxerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fluxer-Example.app/Fluxer-Example";
 			};
 			name = Debug;
 		};
@@ -665,7 +650,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reb-dev.FluxerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fluxer-Example.app/Fluxer-Example";
 			};
 			name = Release;
 		};
