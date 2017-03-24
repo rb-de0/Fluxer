@@ -39,34 +39,46 @@ Please define as follows.
 ```Swift
 class MainStore: Store {
     let value = ObservableValue(0)
+    
+    required init(with dispatcher: Dispatcher) {
+    }
 }
 
-let mainStore = MainStore()
+let mainStore = MainStore(with: dispatcher)
 ```
+
+In Store initializer, please register ActionHandler in dispatcher. The description of ActionHandler is below.
 
 ### Dispatcher
 
-Dispatcher manages multiple ActionHandlers and changes a state of a Store.
+Dispatcher manages multiple ActionHandlers and tells Actions to Action.
 Please instantiate as follows.
 
 ```Swift
-let dispacher = Dispatcher(store: mainStore)
+let dispacher = Dispatcher()
 ```
-
-In the Dispatcher a Store is held with weak references, so you need to keep it in a different location.
 
 #### Registration ActionHandler
 
-ActionHandler changes a Store from a current Store and a Action.
+ActionHandler changes a Store from a dispatched Action.
 Action has data to change Store.
 Please register as follows.
 
 ```Swift
 struct HogeAction: Action {}
 
-let token = dispacher.register { action, store in
-    store.value.value = 10
+class MainStore: Store {
+    let value = ObservableValue(0)
+    
+    required init(with dispatcher: Dispatcher) {
+        let token = dispacher.register { action in
+            store.value.value = 10
+        }
+    }
 }
+
+let dispacher = Dispatcher()
+let mainStore = MainStore(with: dispatcher)
 
 dispatcher.dispatch(HogeAction())
 ```
@@ -77,8 +89,10 @@ Dispatcher can dispatch actions asynchronously.
 Please register as follows.
 
 ```Swift
-dispatcher.dispatch { store, callback in
-    callback { store in HogeAction() }
+dispatcher.dispatch { callback in
+
+	 // do background tasks
+    callback(HogeAction())
 }
 ```
 
@@ -149,6 +163,7 @@ disposeBag = DisposeBag() // dispose
 ## Future Improvement
 
 - Docs
+- SomeOperator
 
 ## Author
 
