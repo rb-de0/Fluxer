@@ -8,31 +8,23 @@
 
 import Foundation
 
-public final class Dispatcher<S: Store> {
+public final class Dispatcher {
     
-    public typealias AsyncActionCallback = ((S) -> Action) -> ()
-    public typealias AsyncActionCreator = (S, @escaping AsyncActionCallback) -> ()
-    
-    private weak var store: S!
+    public typealias AsyncActionCallback = (Action) -> ()
+    public typealias AsyncActionCreator = (@escaping AsyncActionCallback) -> ()
     
     private let lock = NSLock()
     
-    private var actionHandlers = [ActionHandler<S>]()
+    private var actionHandlers = [ActionHandler]()
     
     private var isDispatching = false
     
-    public init(store: S) {
-        self.store = store
-    }
+    public init() {}
     
     public func dispatch(_ action: Action) {
         
         lock.lock()
         defer { lock.unlock() }
-        
-        if isDispatching {
-            return
-        }
         
         startDispatch()
         
@@ -45,13 +37,12 @@ public final class Dispatcher<S: Store> {
     
     public func dispatch(_ asyncActionCreator: AsyncActionCreator) {
         
-        asyncActionCreator(store) {[weak self] getAction in
+        asyncActionCreator {[weak self] action in
             
             guard let strongSelf = self else {
                 return
             }
             
-            let action = getAction(strongSelf.store)
             strongSelf.dispatch(action)
         }
     }
@@ -78,7 +69,7 @@ public final class Dispatcher<S: Store> {
         }
     }
     
-    public func register(_ handler: @escaping (Action, S) -> ()) -> String {
+    public func register(_ handler: @escaping (Action) -> ()) -> String {
         
         let registrationToken = generateRegistrationToken()
         actionHandlers.append(ActionHandler(registrationToken, handler, .waiting))
@@ -107,14 +98,14 @@ public final class Dispatcher<S: Store> {
         isDispatching = false
     }
     
-    private func invokeActionHandler(handler: ActionHandler<S>, action: Action) {
+    private func invokeActionHandler(handler: ActionHandler, action: Action) {
         
         guard handler.status == .waiting else {
             return
         }
         
         handler.status = .pending
-        handler.handleFunc(action, store)
+        handler.handleFunc(action)
         handler.status = .handled
     }
     

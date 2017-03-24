@@ -37,6 +37,7 @@
 		18D395661E81193F0068E37D /* DispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395651E81193F0068E37D /* DispatcherTests.swift */; };
 		18D395691E81232B0068E37D /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395671E8123270068E37D /* DisposeBag.swift */; };
 		18D3956B1E8123DF0068E37D /* DisposeBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3956A1E8123DF0068E37D /* DisposeBagTests.swift */; };
+		A14C57901E857132006170C7 /* DispatcherIllegalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C578F1E857132006170C7 /* DispatcherIllegalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +47,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 18D395081E80F31F0068E37D;
 			remoteInfo = Fluxer;
-		};
-		18D395151E80F31F0068E37D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18D394B21E80D8FB0068E37D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18D394B91E80D8FB0068E37D;
-			remoteInfo = "Fluxer-Example";
 		};
 		18D3951C1E80F31F0068E37D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -110,6 +104,7 @@
 		18D395651E81193F0068E37D /* DispatcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatcherTests.swift; sourceTree = "<group>"; };
 		18D395671E8123270068E37D /* DisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
 		18D3956A1E8123DF0068E37D /* DisposeBagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBagTests.swift; sourceTree = "<group>"; };
+		A14C578F1E857132006170C7 /* DispatcherIllegalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatcherIllegalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				18D395651E81193F0068E37D /* DispatcherTests.swift */,
+				A14C578F1E857132006170C7 /* DispatcherIllegalTests.swift */,
 			);
 			path = Dispatcher;
 			sourceTree = "<group>";
@@ -312,7 +308,6 @@
 			);
 			dependencies = (
 				18D395141E80F31F0068E37D /* PBXTargetDependency */,
-				18D395161E80F31F0068E37D /* PBXTargetDependency */,
 			);
 			name = FluxerTests;
 			productName = FluxerTests;
@@ -340,7 +335,6 @@
 					18D395101E80F31F0068E37D = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 18D394B91E80D8FB0068E37D;
 					};
 				};
 			};
@@ -429,6 +423,7 @@
 				18D395641E8117300068E37D /* RenderTests.swift in Sources */,
 				18D395191E80F31F0068E37D /* FluxerTests.swift in Sources */,
 				18D395661E81193F0068E37D /* DispatcherTests.swift in Sources */,
+				A14C57901E857132006170C7 /* DispatcherIllegalTests.swift in Sources */,
 				18D3955E1E81131E0068E37D /* BlockDisposableTests.swift in Sources */,
 				18D3956B1E8123DF0068E37D /* DisposeBagTests.swift in Sources */,
 				18D395621E8116810068E37D /* ObservableValueTests.swift in Sources */,
@@ -443,11 +438,6 @@
 			isa = PBXTargetDependency;
 			target = 18D395081E80F31F0068E37D /* Fluxer */;
 			targetProxy = 18D395131E80F31F0068E37D /* PBXContainerItemProxy */;
-		};
-		18D395161E80F31F0068E37D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 18D394B91E80D8FB0068E37D /* Fluxer-Example */;
-			targetProxy = 18D395151E80F31F0068E37D /* PBXContainerItemProxy */;
 		};
 		18D3951D1E80F31F0068E37D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -651,7 +641,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reb-dev.FluxerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fluxer-Example.app/Fluxer-Example";
 			};
 			name = Debug;
 		};
@@ -665,7 +654,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reb-dev.FluxerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fluxer-Example.app/Fluxer-Example";
 			};
 			name = Release;
 		};

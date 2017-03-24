@@ -6,13 +6,13 @@
 //  Copyright © 2017年 rb_de0. All rights reserved.
 //
 
-class ActionHandler<S: Store> {
+class ActionHandler {
     
     let registrationToken: String
-    let handleFunc: (Action, S) -> ()
+    let handleFunc: (Action) -> ()
     var status: DispatchStatus
     
-    init(_ registrationToken: String, _ handleFunc: @escaping (Action, S) -> (), _ status: DispatchStatus) {
+    init(_ registrationToken: String, _ handleFunc: @escaping (Action) -> (), _ status: DispatchStatus) {
         self.registrationToken = registrationToken
         self.handleFunc = handleFunc
         self.status = status
