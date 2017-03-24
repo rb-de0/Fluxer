@@ -71,8 +71,8 @@ class MainStore: Store {
     let value = ObservableValue(0)
     
     required init(with dispatcher: Dispatcher) {
-        let token = dispacher.register { action in
-            store.value.value = 10
+        let token = dispacher.register { [weak self] action in
+            self?.value.value = 10
         }
     }
 }
@@ -164,6 +164,7 @@ disposeBag = DisposeBag() // dispose
 
 - Docs
 - SomeOperator
+- Support Swift Package Manager
 
 ## Author
 
