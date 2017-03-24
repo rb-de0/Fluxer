@@ -26,10 +26,6 @@ public final class Dispatcher {
         lock.lock()
         defer { lock.unlock() }
         
-        if isDispatching {
-            return
-        }
-        
         startDispatch()
         
         actionHandlers.forEach { handler in

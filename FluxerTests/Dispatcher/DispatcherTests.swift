@@ -24,7 +24,6 @@ class DispatcherTests: XCTestCase {
     func testHandlerCallOrder() {
         
         let dispatcher = Dispatcher()
-        _ = TestStore(with: dispatcher)
         
         var orderList = [Int]()
         
@@ -44,7 +43,6 @@ class DispatcherTests: XCTestCase {
     func testWaitFor() {
         
         let dispatcher = Dispatcher()
-        _ = TestStore(with: dispatcher)
         
         var orderList = [Int]()
         var waitTokens = [String]()
