@@ -13,6 +13,8 @@ class DispatcherTests: XCTestCase {
     
     class TestStore: Store {
         var value = 0
+        
+        required init(with dispatcher: Dispatcher) {}
     }
     
     class TestAction: Action {}
@@ -21,16 +23,16 @@ class DispatcherTests: XCTestCase {
     
     func testHandlerCallOrder() {
         
-        let store = TestStore()
-        let dispatcher = Dispatcher(store: store)
+        let dispatcher = Dispatcher()
+        _ = TestStore(with: dispatcher)
         
         var orderList = [Int]()
         
-        _ = dispatcher.register { _, _ in
+        _ = dispatcher.register { _ in
             orderList.append(0)
         }
         
-        _ = dispatcher.register { _, _ in
+        _ = dispatcher.register { _ in
             orderList.append(1)
         }
         
@@ -41,24 +43,24 @@ class DispatcherTests: XCTestCase {
     
     func testWaitFor() {
         
-        let store = TestStore()
-        let dispatcher = Dispatcher(store: store)
+        let dispatcher = Dispatcher()
+        _ = TestStore(with: dispatcher)
         
         var orderList = [Int]()
         var waitTokens = [String]()
         
-        _ = dispatcher.register { action, _ in
+        _ = dispatcher.register { action in
             dispatcher.waitFor(waitTokens, action: action)
             orderList.append(0)
         }
         
-        let token = dispatcher.register { _, _ in
+        let token = dispatcher.register { _ in
             orderList.append(1)
         }
         
         waitTokens.append(token)
         
-        _ = dispatcher.register { _, _ in
+        _ = dispatcher.register { _ in
             orderList.append(2)
         }
         
@@ -69,10 +71,10 @@ class DispatcherTests: XCTestCase {
     
     func testStoreSubscribe() {
         
-        let store = TestStore()
-        let dispatcher = Dispatcher(store: store)
+        let dispatcher = Dispatcher()
+        let store = TestStore(with: dispatcher)
         
-        _ = dispatcher.register { action, _ in
+        _ = dispatcher.register { action in
             store.value = 10
         }
         
@@ -83,10 +85,10 @@ class DispatcherTests: XCTestCase {
     
     func testActionHandler() {
         
-        let store = TestStore()
-        let dispatcher = Dispatcher(store: store)
+        let dispatcher = Dispatcher()
+        let store = TestStore(with: dispatcher)
         
-        _ = dispatcher.register { action, _ in
+        _ = dispatcher.register { action in
             
             switch action {
             case _ as TestAction:
@@ -112,15 +114,15 @@ class DispatcherTests: XCTestCase {
     func testAsyncActionCreator() {
         
         let expectation = self.expectation(description: #function)
-        let store = TestStore()
-        let dispatcher = Dispatcher(store: store)
+        let dispatcher = Dispatcher()
+        let store = TestStore(with: dispatcher)
         
-        _ = dispatcher.register { _, _ in
+        _ = dispatcher.register { _ in
             store.value = 10
         }
         
-        dispatcher.dispatch { store, callback in
-            callback { store in TestAction() }
+        dispatcher.dispatch { callback in
+            callback(TestAction())
             expectation.fulfill()
         }
         
@@ -132,10 +134,10 @@ class DispatcherTests: XCTestCase {
     func testAsyncStoreUpdate() {
         
         let expectation = self.expectation(description: #function)
-        let store = TestStore()
-        let dispatcher = Dispatcher(store: store)
+        let dispatcher = Dispatcher()
+        let store = TestStore(with: dispatcher)
         
-        _ = dispatcher.register { action, _ in
+        _ = dispatcher.register { action in
             
             switch action {
             case _ as TestAction:
@@ -149,17 +151,15 @@ class DispatcherTests: XCTestCase {
             }
         }
         
-        dispatcher.dispatch { store, callback in
+        dispatcher.dispatch { callback in
             
             XCTAssertEqual(store.value, 0)
             
             DispatchQueue.global().async {
                 sleep(2)
                 
-                callback { store in
-                    XCTAssertEqual(store.value, -1)
-                    return TestAction()
-                }
+                XCTAssertEqual(store.value, -1)
+                callback(TestAction())
                 
                 expectation.fulfill()
             }
@@ -174,10 +174,10 @@ class DispatcherTests: XCTestCase {
     
     func testUnregister() {
         
-        let store = TestStore()
-        let dispatcher = Dispatcher(store: store)
+        let dispatcher = Dispatcher()
+        let store = TestStore(with: dispatcher)
         
-        let token = dispatcher.register { action, _ in
+        let token = dispatcher.register { action in
             
             switch action {
             case _ as TestAction:
