@@ -33,11 +33,11 @@
 		18D395691E81232B0068E37D /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395671E8123270068E37D /* DisposeBag.swift */; };
 		18D3956B1E8123DF0068E37D /* DisposeBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3956A1E8123DF0068E37D /* DisposeBagTests.swift */; };
 		A14C57901E857132006170C7 /* DispatcherIllegalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C578F1E857132006170C7 /* DispatcherIllegalTests.swift */; };
-		A14C57971E860B64006170C7 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57921E860B64006170C7 /* Action.swift */; };
-		A14C57981E860B64006170C7 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57931E860B64006170C7 /* ActionHandler.swift */; };
-		A14C57991E860B64006170C7 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57941E860B64006170C7 /* Dispatcher.swift */; };
-		A14C579A1E860B64006170C7 /* DispatchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57951E860B64006170C7 /* DispatchStatus.swift */; };
-		A14C579B1E860B64006170C7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57961E860B64006170C7 /* Store.swift */; };
+		A14C579C1E860C84006170C7 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57921E860B64006170C7 /* Action.swift */; };
+		A14C579D1E860C87006170C7 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57931E860B64006170C7 /* ActionHandler.swift */; };
+		A14C579E1E860C8B006170C7 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57941E860B64006170C7 /* Dispatcher.swift */; };
+		A14C579F1E860C8E006170C7 /* DispatchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57951E860B64006170C7 /* DispatchStatus.swift */; };
+		A14C57A01E860C91006170C7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57961E860B64006170C7 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -399,13 +399,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A14C579B1E860B64006170C7 /* Store.swift in Sources */,
 				18D394F01E80F2440068E37D /* ViewController.swift in Sources */,
-				A14C57971E860B64006170C7 /* Action.swift in Sources */,
-				A14C57981E860B64006170C7 /* ActionHandler.swift in Sources */,
-				A14C579A1E860B64006170C7 /* DispatchStatus.swift in Sources */,
 				18D394E81E80F2440068E37D /* AppDelegate.swift in Sources */,
-				A14C57991E860B64006170C7 /* Dispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,12 +409,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D3954F1E8106C70068E37D /* Observable.swift in Sources */,
+				A14C579C1E860C84006170C7 /* Action.swift in Sources */,
 				18D395691E81232B0068E37D /* DisposeBag.swift in Sources */,
+				A14C579F1E860C8E006170C7 /* DispatchStatus.swift in Sources */,
 				18D3954C1E8106B90068E37D /* CompositeDisposable.swift in Sources */,
 				18D395571E810B960068E37D /* AnyObservable.swift in Sources */,
 				18D3954B1E8106B90068E37D /* BlockDisposable.swift in Sources */,
+				A14C57A01E860C91006170C7 /* Store.swift in Sources */,
 				18D3953E1E8104980068E37D /* ObservableValue.swift in Sources */,
+				A14C579E1E860C8B006170C7 /* Dispatcher.swift in Sources */,
 				18D395461E81064C0068E37D /* Render.swift in Sources */,
+				A14C579D1E860C87006170C7 /* ActionHandler.swift in Sources */,
 				18D3954D1E8106B90068E37D /* Disposable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
