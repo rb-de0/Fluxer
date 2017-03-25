@@ -6,6 +6,9 @@
 //  Copyright © 2017年 rb_de0. All rights reserved.
 //
 
+
+import Foundation
+
 public class Render<O: Observable>: Observable {
     
     private let source: AnyObservable<O>
