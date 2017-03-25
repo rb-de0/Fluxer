@@ -6,6 +6,8 @@
 //  Copyright © 2017年 rb_de0. All rights reserved.
 //
 
+import Foundation
+
 public protocol Observable {
     
     associatedtype T
