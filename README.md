@@ -163,11 +163,48 @@ disposeBag = DisposeBag() // dispose
 
 ```
 
+### Operator
+
+Fluxer provides a few operators for Observable. Operators will be added in the future.
+
+#### Map
+
+Map is an operator that converts Observable values ​​to arbitrary types.
+
+```Swift
+let value = ObservableValue(0)
+value.map { $0 + 1 }.subscribe {
+    print($0)
+}
+```
+
+#### Filter
+
+Filter is an operator that flows only values ​​that satisfy the specified conditions.
+
+```Swift
+let value = ObservableValue(0)
+value.filter { $0 >= 0 }.subscribe {
+    print($0)
+}
+```
+
+#### Combine
+
+Map and Filter can be used in combination.
+
+```Swift
+let value = ObservableValue(0)
+value.map { $0 + 1 }.filter { $0 >= 0 }.subscribe {
+    print($0)
+}
+```
+
 ## Future Improvement
 
 - Docs
 - SomeOperator
-- Support Swift Package Manager
+- Swift Package Manager Tests
 
 ## Author
 
