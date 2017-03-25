@@ -6,23 +6,29 @@
 //  Copyright © 2017年 rb_de0. All rights reserved.
 //
 
-
 import Foundation
 
-public class Render<O: Observable>: Observable {
+public class Render<T>: Observable {
     
-    private let source: AnyObservable<O>
+    private let _source: AnyObservable<T>
     
-    init(_ source: O) {
-        self.source = AnyObservable(base: source)
+    init<O: Observable>(_ source: O) where O.T == T {
+        _source = AnyObservable(source)
     }
     
-    public func subscribe(_ onUpdateValue: @escaping (O.T) -> ()) -> Disposable {
+    public func subscribe(_ onUpdateValue: @escaping (T) -> ()) -> Disposable {
         
-        return source.subscribe { value in
+        return _source.subscribe { value in
             DispatchQueue.main.async {
                 onUpdateValue(value)
             }
         }
+    }
+}
+
+public extension Observable {
+    
+    func asRender() -> Render<Self.T> {
+        return Render(self)
     }
 }

@@ -15,13 +15,6 @@ public protocol Observable {
     func subscribe(_ onUpdateValue: @escaping (T) -> ()) -> Disposable
 }
 
-public extension Observable {
-    
-    func asRender() -> Render<Self> {
-        return Render(self)
-    }
-}
-
 // MARK: - Util
 extension Observable {
     

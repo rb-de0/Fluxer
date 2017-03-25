@@ -60,6 +60,6 @@ class ViewController: UIViewController {
         
         mainStore.count.asRender().subscribe { [weak self] in
             self?.countLabel.text = String($0)
-        }.addTo(disposeBag)        
+        }.addTo(disposeBag)
     }
 }

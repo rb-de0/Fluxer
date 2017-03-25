@@ -6,13 +6,11 @@
 //  Copyright © 2017年 rb_de0. All rights reserved.
 //
 
-final class AnyObservable<O: Observable>: Observable {
-    
-    typealias T = O.T
+final class AnyObservable<T>: Observable {
     
     private let _subscribe: (@escaping (T) -> ()) -> Disposable
     
-    init(base: O) {
+    init<O: Observable>(_ base: O) where O.T == T {
         self._subscribe = base.subscribe
     }
     
