@@ -2,8 +2,11 @@
 
 [![apm](https://img.shields.io/apm/l/vim-mode.svg)]()
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+[![Version](https://img.shields.io/cocoapods/v/Fluxer.svg?style=flat)](http://cocoapods.org/pods/Fluxer)
 [![Build Status](https://travis-ci.org/rb-de0/Fluxer.svg?branch=master)](https://travis-ci.org/rb-de0/Fluxer)
 [![Coverage Status](https://coveralls.io/repos/github/rb-de0/Fluxer/badge.svg?branch=master)](https://coveralls.io/github/rb-de0/Fluxer?branch=master)
+
 
 Swift Flux Framework
 
