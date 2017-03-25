@@ -26,7 +26,7 @@ class MapTests: XCTestCase {
         XCTAssertEqual(bindableValue, 11)
     }
     
-    func testLifeCycle() {
+    func testSourceLifeCycle() {
         
         var bindableValue = 0
         var source = ObservableValue(0)
@@ -41,6 +41,27 @@ class MapTests: XCTestCase {
         XCTAssertEqual(bindableValue, 11)
         
         source = ObservableValue(0)
+        
+        source.value = 20
+        
+        XCTAssertEqual(bindableValue, 11)
+    }
+    
+    func testMapLifeCycle() {
+        
+        var bindableValue = 0
+        let source = ObservableValue(0)
+        var map = source.map { $0 + 1 }
+        
+        _ = map.subscribe {
+            bindableValue = $0
+        }
+        
+        source.value = 10
+        
+        XCTAssertEqual(bindableValue, 11)
+        
+        map = source.map { $0 + 1 }
         
         source.value = 20
         

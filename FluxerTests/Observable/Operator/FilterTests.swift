@@ -31,7 +31,7 @@ class FilterTests: XCTestCase {
         XCTAssertEqual(bindableValue, 11)
     }
     
-    func testLifeCycle() {
+    func testSourceLifeCycle() {
         
         var bindableValue = 0
         var source = ObservableValue(0)
@@ -46,6 +46,27 @@ class FilterTests: XCTestCase {
         XCTAssertEqual(bindableValue, 11)
         
         source = ObservableValue(0)
+        
+        source.value = 20
+        
+        XCTAssertEqual(bindableValue, 11)
+    }
+    
+    func testFilterLifeCycle() {
+        
+        var bindableValue = 0
+        let source = ObservableValue(0)
+        var filter = source.filter { $0 > 10 }
+        
+        _ = filter.subscribe {
+            bindableValue = $0
+        }
+        
+        source.value = 11
+        
+        XCTAssertEqual(bindableValue, 11)
+        
+        filter = source.filter { $0 > 10 }
         
         source.value = 20
         
