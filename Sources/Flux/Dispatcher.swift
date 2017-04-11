@@ -56,7 +56,7 @@ public final class Dispatcher {
         for registrationToken in registrationTokens {
             
             guard let handler = actionHandlers.filter ({ $0.registrationToken == registrationToken }).first else {
-                return
+                continue
             }
             
             if handler.status == .pending {
