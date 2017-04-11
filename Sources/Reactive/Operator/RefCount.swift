@@ -13,8 +13,8 @@ public class RefCount<T>: Observable {
     private var subscriptionsCount = 0 {
         didSet {
             
-            lock.lock()
-            defer { lock.unlock() }
+            countLock.lock()
+            defer { countLock.unlock() }
             
             if subscriptionsCount <= 0 {
                 isConnected = false
@@ -26,6 +26,7 @@ public class RefCount<T>: Observable {
     private var isConnected = false
     private var connectableDisposable: Disposable?
     
+    private let countLock = NSLock()
     private let lock = NSLock()
     
     init(_ source: ConnectableObservable<T>) {

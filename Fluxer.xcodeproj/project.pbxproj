@@ -21,6 +21,9 @@
 		1815ACCE1E9CB8EC002EFFB9 /* Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACC21E9CB8EC002EFFB9 /* Render.swift */; };
 		1815ACD01E9CC286002EFFB9 /* ColdObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACCF1E9CC286002EFFB9 /* ColdObservable.swift */; };
 		1815ACD21E9CC2FF002EFFB9 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD11E9CC2FF002EFFB9 /* Observer.swift */; };
+		1815ACD41E9CC582002EFFB9 /* ConnectableObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD31E9CC582002EFFB9 /* ConnectableObservableTests.swift */; };
+		1815ACD81E9CC7B4002EFFB9 /* RefCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD71E9CC7B4002EFFB9 /* RefCountTests.swift */; };
+		1815ACDA1E9CC94B002EFFB9 /* ColdObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD91E9CC94B002EFFB9 /* ColdObservableTests.swift */; };
 		18D394E81E80F2440068E37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D394DC1E80F2440068E37D /* AppDelegate.swift */; };
 		18D394E91E80F2440068E37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D394DD1E80F2440068E37D /* Assets.xcassets */; };
 		18D394EA1E80F2440068E37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D394DE1E80F2440068E37D /* LaunchScreen.storyboard */; };
@@ -94,6 +97,9 @@
 		1815ACC21E9CB8EC002EFFB9 /* Render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Render.swift; sourceTree = "<group>"; };
 		1815ACCF1E9CC286002EFFB9 /* ColdObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColdObservable.swift; sourceTree = "<group>"; };
 		1815ACD11E9CC2FF002EFFB9 /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		1815ACD31E9CC582002EFFB9 /* ConnectableObservableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectableObservableTests.swift; sourceTree = "<group>"; };
+		1815ACD71E9CC7B4002EFFB9 /* RefCountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefCountTests.swift; sourceTree = "<group>"; };
+		1815ACD91E9CC94B002EFFB9 /* ColdObservableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColdObservableTests.swift; sourceTree = "<group>"; };
 		18D394BA1E80D8FB0068E37D /* Fluxer-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fluxer-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D394DC1E80F2440068E37D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D394DD1E80F2440068E37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -276,6 +282,8 @@
 				A14C57A61E861FF8006170C7 /* Operator */,
 				18D395611E8116810068E37D /* ObservableValueTests.swift */,
 				18D395631E8117300068E37D /* RenderTests.swift */,
+				1815ACD31E9CC582002EFFB9 /* ConnectableObservableTests.swift */,
+				1815ACD91E9CC94B002EFFB9 /* ColdObservableTests.swift */,
 			);
 			path = Observable;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 			children = (
 				A14C57A71E862004006170C7 /* MapTests.swift */,
 				A14C57AC1E86263D006170C7 /* FilterTests.swift */,
+				1815ACD71E9CC7B4002EFFB9 /* RefCountTests.swift */,
 			);
 			path = Operator;
 			sourceTree = "<group>";
@@ -489,9 +498,12 @@
 				A14C57901E857132006170C7 /* DispatcherIllegalTests.swift in Sources */,
 				A14C57AD1E86263D006170C7 /* FilterTests.swift in Sources */,
 				18D3955E1E81131E0068E37D /* BlockDisposableTests.swift in Sources */,
+				1815ACD41E9CC582002EFFB9 /* ConnectableObservableTests.swift in Sources */,
+				1815ACDA1E9CC94B002EFFB9 /* ColdObservableTests.swift in Sources */,
 				18D3956B1E8123DF0068E37D /* DisposeBagTests.swift in Sources */,
 				18D395621E8116810068E37D /* ObservableValueTests.swift in Sources */,
 				18D395601E8114C80068E37D /* CompositeDisposableTests.swift in Sources */,
+				1815ACD81E9CC7B4002EFFB9 /* RefCountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

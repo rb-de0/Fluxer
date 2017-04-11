@@ -23,9 +23,9 @@ public class ColdObservable<T>: Observable {
     }
 }
 
-public extension Observable {
+extension ColdObservable {
     
-    static func create<T>(_ subscribeHandler: @escaping ColdObservable<T>.SubscribeHandler) -> ColdObservable<T> {
+    static func create(_ subscribeHandler: @escaping SubscribeHandler) -> ColdObservable<T> {
         return ColdObservable(subscribeHandler)
     }
 }
