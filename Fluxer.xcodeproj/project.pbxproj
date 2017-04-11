@@ -19,6 +19,8 @@
 		1815ACCC1E9CB8EC002EFFB9 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACC01E9CB8EC002EFFB9 /* Map.swift */; };
 		1815ACCD1E9CB8EC002EFFB9 /* RefCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACC11E9CB8EC002EFFB9 /* RefCount.swift */; };
 		1815ACCE1E9CB8EC002EFFB9 /* Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACC21E9CB8EC002EFFB9 /* Render.swift */; };
+		1815ACD01E9CC286002EFFB9 /* ColdObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACCF1E9CC286002EFFB9 /* ColdObservable.swift */; };
+		1815ACD21E9CC2FF002EFFB9 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD11E9CC2FF002EFFB9 /* Observer.swift */; };
 		18D394E81E80F2440068E37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D394DC1E80F2440068E37D /* AppDelegate.swift */; };
 		18D394E91E80F2440068E37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D394DD1E80F2440068E37D /* Assets.xcassets */; };
 		18D394EA1E80F2440068E37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D394DE1E80F2440068E37D /* LaunchScreen.storyboard */; };
@@ -90,6 +92,8 @@
 		1815ACC01E9CB8EC002EFFB9 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		1815ACC11E9CB8EC002EFFB9 /* RefCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefCount.swift; sourceTree = "<group>"; };
 		1815ACC21E9CB8EC002EFFB9 /* Render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Render.swift; sourceTree = "<group>"; };
+		1815ACCF1E9CC286002EFFB9 /* ColdObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColdObservable.swift; sourceTree = "<group>"; };
+		1815ACD11E9CC2FF002EFFB9 /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		18D394BA1E80D8FB0068E37D /* Fluxer-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fluxer-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D394DC1E80F2440068E37D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D394DD1E80F2440068E37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				1815ACBB1E9CB8EC002EFFB9 /* ConnectableObservable.swift */,
 				1815ACBC1E9CB8EC002EFFB9 /* Observable.swift */,
 				1815ACBD1E9CB8EC002EFFB9 /* ObservableValue.swift */,
+				1815ACCF1E9CC286002EFFB9 /* ColdObservable.swift */,
+				1815ACD11E9CC2FF002EFFB9 /* Observer.swift */,
 			);
 			path = Observable;
 			sourceTree = "<group>";
@@ -458,6 +464,8 @@
 				A14C579F1E860C8E006170C7 /* DispatchStatus.swift in Sources */,
 				A14C57A01E860C91006170C7 /* Store.swift in Sources */,
 				1815ACCE1E9CB8EC002EFFB9 /* Render.swift in Sources */,
+				1815ACD01E9CC286002EFFB9 /* ColdObservable.swift in Sources */,
+				1815ACD21E9CC2FF002EFFB9 /* Observer.swift in Sources */,
 				1815ACCB1E9CB8EC002EFFB9 /* Filter.swift in Sources */,
 				1815ACC31E9CB8EC002EFFB9 /* BlockDisposable.swift in Sources */,
 				A14C579E1E860C8B006170C7 /* Dispatcher.swift in Sources */,
