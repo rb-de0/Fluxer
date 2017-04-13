@@ -9,3 +9,17 @@
 public protocol Store {
     init(with dispatcher: Dispatcher)
 }
+
+public extension Store {
+    
+    func publish() {
+        
+        let reflected = Mirror(reflecting: self)
+        
+        reflected.children
+            .flatMap { $0.value as? Publushable }
+            .forEach {
+                $0.publish()
+            }
+    }
+}

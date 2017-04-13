@@ -6,7 +6,7 @@
 //  Copyright © 2017年 rb_de0. All rights reserved.
 //
 
-public class ObservableValue<T>: Observable {
+public class ObservableValue<T>: Observable, Publushable {
     
     private var subscriptions = [String: ((T) -> ())]()
     
@@ -28,5 +28,11 @@ public class ObservableValue<T>: Observable {
         return BlockDisposable { [weak self] in
             self?.subscriptions[token] = nil
         }
+    }
+    
+    // MARK: - internal
+    
+    func publish() {
+        subscriptions.values.forEach { $0(value) }
     }
 }

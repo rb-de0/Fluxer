@@ -24,6 +24,8 @@
 		1815ACD41E9CC582002EFFB9 /* ConnectableObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD31E9CC582002EFFB9 /* ConnectableObservableTests.swift */; };
 		1815ACD81E9CC7B4002EFFB9 /* RefCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD71E9CC7B4002EFFB9 /* RefCountTests.swift */; };
 		1815ACDA1E9CC94B002EFFB9 /* ColdObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD91E9CC94B002EFFB9 /* ColdObservableTests.swift */; };
+		18A218321E9F317600671527 /* Publushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A218311E9F317600671527 /* Publushable.swift */; };
+		18A218341E9F31DA00671527 /* PublishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A218331E9F31DA00671527 /* PublishTests.swift */; };
 		18D394E81E80F2440068E37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D394DC1E80F2440068E37D /* AppDelegate.swift */; };
 		18D394E91E80F2440068E37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D394DD1E80F2440068E37D /* Assets.xcassets */; };
 		18D394EA1E80F2440068E37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D394DE1E80F2440068E37D /* LaunchScreen.storyboard */; };
@@ -100,6 +102,8 @@
 		1815ACD31E9CC582002EFFB9 /* ConnectableObservableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectableObservableTests.swift; sourceTree = "<group>"; };
 		1815ACD71E9CC7B4002EFFB9 /* RefCountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefCountTests.swift; sourceTree = "<group>"; };
 		1815ACD91E9CC94B002EFFB9 /* ColdObservableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColdObservableTests.swift; sourceTree = "<group>"; };
+		18A218311E9F317600671527 /* Publushable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publushable.swift; sourceTree = "<group>"; };
+		18A218331E9F31DA00671527 /* PublishTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTests.swift; sourceTree = "<group>"; };
 		18D394BA1E80D8FB0068E37D /* Fluxer-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fluxer-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D394DC1E80F2440068E37D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D394DD1E80F2440068E37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				1815ACBD1E9CB8EC002EFFB9 /* ObservableValue.swift */,
 				1815ACCF1E9CC286002EFFB9 /* ColdObservable.swift */,
 				1815ACD11E9CC2FF002EFFB9 /* Observer.swift */,
+				18A218311E9F317600671527 /* Publushable.swift */,
 			);
 			path = Observable;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				18D395631E8117300068E37D /* RenderTests.swift */,
 				1815ACD31E9CC582002EFFB9 /* ConnectableObservableTests.swift */,
 				1815ACD91E9CC94B002EFFB9 /* ColdObservableTests.swift */,
+				18A218331E9F31DA00671527 /* PublishTests.swift */,
 			);
 			path = Observable;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 				A14C579E1E860C8B006170C7 /* Dispatcher.swift in Sources */,
 				1815ACCC1E9CB8EC002EFFB9 /* Map.swift in Sources */,
 				1815ACCA1E9CB8EC002EFFB9 /* ObservableValue.swift in Sources */,
+				18A218321E9F317600671527 /* Publushable.swift in Sources */,
 				1815ACC71E9CB8EC002EFFB9 /* AnyObservable.swift in Sources */,
 				A14C579D1E860C87006170C7 /* ActionHandler.swift in Sources */,
 				1815ACC41E9CB8EC002EFFB9 /* CompositeDisposable.swift in Sources */,
@@ -494,6 +501,7 @@
 				18D395641E8117300068E37D /* RenderTests.swift in Sources */,
 				18D395191E80F31F0068E37D /* FluxerTests.swift in Sources */,
 				A14C57A81E862004006170C7 /* MapTests.swift in Sources */,
+				18A218341E9F31DA00671527 /* PublishTests.swift in Sources */,
 				18D395661E81193F0068E37D /* DispatcherTests.swift in Sources */,
 				A14C57901E857132006170C7 /* DispatcherIllegalTests.swift in Sources */,
 				A14C57AD1E86263D006170C7 /* FilterTests.swift in Sources */,
