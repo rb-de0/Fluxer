@@ -17,7 +17,7 @@ public extension Store {
         let reflected = Mirror(reflecting: self)
         
         reflected.children
-            .flatMap { $0.value as? Publushable }
+            .flatMap { $0.value as? Publishable }
             .forEach {
                 $0.publish()
             }

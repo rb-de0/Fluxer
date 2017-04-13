@@ -6,9 +6,9 @@
 //  Copyright © 2017年 rb_de0. All rights reserved.
 //
 
-public class ObservableValue<T>: Observable, Publushable {
+public class ObservableValue<T>: Observable {
     
-    private var subscriptions = [String: ((T) -> ())]()
+    fileprivate var subscriptions = [String: ((T) -> ())]()
     
     public var value: T {
         didSet {
@@ -29,8 +29,10 @@ public class ObservableValue<T>: Observable, Publushable {
             self?.subscriptions[token] = nil
         }
     }
-    
-    // MARK: - internal
+}
+
+// MARK: - Publishable
+extension ObservableValue: Publishable {
     
     func publish() {
         subscriptions.values.forEach { $0(value) }
