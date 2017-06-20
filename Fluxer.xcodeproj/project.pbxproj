@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1815ACC31E9CB8EC002EFFB9 /* BlockDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACB51E9CB8EC002EFFB9 /* BlockDisposable.swift */; };
+		1815ACC41E9CB8EC002EFFB9 /* CompositeDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACB61E9CB8EC002EFFB9 /* CompositeDisposable.swift */; };
+		1815ACC51E9CB8EC002EFFB9 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACB71E9CB8EC002EFFB9 /* Disposable.swift */; };
+		1815ACC61E9CB8EC002EFFB9 /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACB81E9CB8EC002EFFB9 /* DisposeBag.swift */; };
+		1815ACC71E9CB8EC002EFFB9 /* AnyObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACBA1E9CB8EC002EFFB9 /* AnyObservable.swift */; };
+		1815ACC81E9CB8EC002EFFB9 /* ConnectableObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACBB1E9CB8EC002EFFB9 /* ConnectableObservable.swift */; };
+		1815ACC91E9CB8EC002EFFB9 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACBC1E9CB8EC002EFFB9 /* Observable.swift */; };
+		1815ACCA1E9CB8EC002EFFB9 /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACBD1E9CB8EC002EFFB9 /* ObservableValue.swift */; };
+		1815ACCB1E9CB8EC002EFFB9 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACBF1E9CB8EC002EFFB9 /* Filter.swift */; };
+		1815ACCC1E9CB8EC002EFFB9 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACC01E9CB8EC002EFFB9 /* Map.swift */; };
+		1815ACCD1E9CB8EC002EFFB9 /* RefCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACC11E9CB8EC002EFFB9 /* RefCount.swift */; };
+		1815ACCE1E9CB8EC002EFFB9 /* Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACC21E9CB8EC002EFFB9 /* Render.swift */; };
+		1815ACD01E9CC286002EFFB9 /* ColdObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACCF1E9CC286002EFFB9 /* ColdObservable.swift */; };
+		1815ACD21E9CC2FF002EFFB9 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD11E9CC2FF002EFFB9 /* Observer.swift */; };
+		1815ACD41E9CC582002EFFB9 /* ConnectableObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD31E9CC582002EFFB9 /* ConnectableObservableTests.swift */; };
+		1815ACD81E9CC7B4002EFFB9 /* RefCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD71E9CC7B4002EFFB9 /* RefCountTests.swift */; };
+		1815ACDA1E9CC94B002EFFB9 /* ColdObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACD91E9CC94B002EFFB9 /* ColdObservableTests.swift */; };
+		18A218321E9F317600671527 /* Publishable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A218311E9F317600671527 /* Publishable.swift */; };
+		18A218341E9F31DA00671527 /* PublishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A218331E9F31DA00671527 /* PublishTests.swift */; };
 		18D394E81E80F2440068E37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D394DC1E80F2440068E37D /* AppDelegate.swift */; };
 		18D394E91E80F2440068E37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D394DD1E80F2440068E37D /* Assets.xcassets */; };
 		18D394EA1E80F2440068E37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D394DE1E80F2440068E37D /* LaunchScreen.storyboard */; };
@@ -18,19 +37,11 @@
 		18D3951F1E80F31F0068E37D /* Fluxer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18D395091E80F31F0068E37D /* Fluxer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18D395281E80F33E0068E37D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18D395271E80F33E0068E37D /* Info.plist */; };
 		18D395311E80F39D0068E37D /* Fluxer.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D395261E80F33E0068E37D /* Fluxer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18D3953E1E8104980068E37D /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3953D1E8104980068E37D /* ObservableValue.swift */; };
-		18D395461E81064C0068E37D /* Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395451E81064C0068E37D /* Render.swift */; };
-		18D3954B1E8106B90068E37D /* BlockDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395481E8106B90068E37D /* BlockDisposable.swift */; };
-		18D3954C1E8106B90068E37D /* CompositeDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395491E8106B90068E37D /* CompositeDisposable.swift */; };
-		18D3954D1E8106B90068E37D /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3954A1E8106B90068E37D /* Disposable.swift */; };
-		18D3954F1E8106C70068E37D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3954E1E8106C70068E37D /* Observable.swift */; };
-		18D395571E810B960068E37D /* AnyObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395561E810B960068E37D /* AnyObservable.swift */; };
 		18D3955E1E81131E0068E37D /* BlockDisposableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3955D1E81131E0068E37D /* BlockDisposableTests.swift */; };
 		18D395601E8114C80068E37D /* CompositeDisposableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3955F1E8114C80068E37D /* CompositeDisposableTests.swift */; };
 		18D395621E8116810068E37D /* ObservableValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395611E8116810068E37D /* ObservableValueTests.swift */; };
 		18D395641E8117300068E37D /* RenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395631E8117300068E37D /* RenderTests.swift */; };
 		18D395661E81193F0068E37D /* DispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395651E81193F0068E37D /* DispatcherTests.swift */; };
-		18D395691E81232B0068E37D /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D395671E8123270068E37D /* DisposeBag.swift */; };
 		18D3956B1E8123DF0068E37D /* DisposeBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D3956A1E8123DF0068E37D /* DisposeBagTests.swift */; };
 		A14C57901E857132006170C7 /* DispatcherIllegalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C578F1E857132006170C7 /* DispatcherIllegalTests.swift */; };
 		A14C579C1E860C84006170C7 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57921E860B64006170C7 /* Action.swift */; };
@@ -38,9 +49,7 @@
 		A14C579E1E860C8B006170C7 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57941E860B64006170C7 /* Dispatcher.swift */; };
 		A14C579F1E860C8E006170C7 /* DispatchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57951E860B64006170C7 /* DispatchStatus.swift */; };
 		A14C57A01E860C91006170C7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57961E860B64006170C7 /* Store.swift */; };
-		A14C57A31E8618D7006170C7 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57A21E8618D7006170C7 /* Map.swift */; };
 		A14C57A81E862004006170C7 /* MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57A71E862004006170C7 /* MapTests.swift */; };
-		A14C57AB1E86259E006170C7 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57A91E862583006170C7 /* Filter.swift */; };
 		A14C57AD1E86263D006170C7 /* FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C57AC1E86263D006170C7 /* FilterTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +85,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1815ACB51E9CB8EC002EFFB9 /* BlockDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockDisposable.swift; sourceTree = "<group>"; };
+		1815ACB61E9CB8EC002EFFB9 /* CompositeDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeDisposable.swift; sourceTree = "<group>"; };
+		1815ACB71E9CB8EC002EFFB9 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		1815ACB81E9CB8EC002EFFB9 /* DisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
+		1815ACBA1E9CB8EC002EFFB9 /* AnyObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyObservable.swift; sourceTree = "<group>"; };
+		1815ACBB1E9CB8EC002EFFB9 /* ConnectableObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectableObservable.swift; sourceTree = "<group>"; };
+		1815ACBC1E9CB8EC002EFFB9 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		1815ACBD1E9CB8EC002EFFB9 /* ObservableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
+		1815ACBF1E9CB8EC002EFFB9 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		1815ACC01E9CB8EC002EFFB9 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		1815ACC11E9CB8EC002EFFB9 /* RefCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefCount.swift; sourceTree = "<group>"; };
+		1815ACC21E9CB8EC002EFFB9 /* Render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Render.swift; sourceTree = "<group>"; };
+		1815ACCF1E9CC286002EFFB9 /* ColdObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColdObservable.swift; sourceTree = "<group>"; };
+		1815ACD11E9CC2FF002EFFB9 /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		1815ACD31E9CC582002EFFB9 /* ConnectableObservableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectableObservableTests.swift; sourceTree = "<group>"; };
+		1815ACD71E9CC7B4002EFFB9 /* RefCountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefCountTests.swift; sourceTree = "<group>"; };
+		1815ACD91E9CC94B002EFFB9 /* ColdObservableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColdObservableTests.swift; sourceTree = "<group>"; };
+		18A218311E9F317600671527 /* Publishable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publishable.swift; sourceTree = "<group>"; };
+		18A218331E9F31DA00671527 /* PublishTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTests.swift; sourceTree = "<group>"; };
 		18D394BA1E80D8FB0068E37D /* Fluxer-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fluxer-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D394DC1E80F2440068E37D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D394DD1E80F2440068E37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,19 +117,11 @@
 		18D3951A1E80F31F0068E37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D395261E80F33E0068E37D /* Fluxer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fluxer.h; sourceTree = "<group>"; };
 		18D395271E80F33E0068E37D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18D3953D1E8104980068E37D /* ObservableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
-		18D395451E81064C0068E37D /* Render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Render.swift; sourceTree = "<group>"; };
-		18D395481E8106B90068E37D /* BlockDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockDisposable.swift; sourceTree = "<group>"; };
-		18D395491E8106B90068E37D /* CompositeDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeDisposable.swift; sourceTree = "<group>"; };
-		18D3954A1E8106B90068E37D /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
-		18D3954E1E8106C70068E37D /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		18D395561E810B960068E37D /* AnyObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyObservable.swift; sourceTree = "<group>"; };
 		18D3955D1E81131E0068E37D /* BlockDisposableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockDisposableTests.swift; sourceTree = "<group>"; };
 		18D3955F1E8114C80068E37D /* CompositeDisposableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeDisposableTests.swift; sourceTree = "<group>"; };
 		18D395611E8116810068E37D /* ObservableValueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableValueTests.swift; sourceTree = "<group>"; };
 		18D395631E8117300068E37D /* RenderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderTests.swift; sourceTree = "<group>"; };
 		18D395651E81193F0068E37D /* DispatcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatcherTests.swift; sourceTree = "<group>"; };
-		18D395671E8123270068E37D /* DisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
 		18D3956A1E8123DF0068E37D /* DisposeBagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBagTests.swift; sourceTree = "<group>"; };
 		A14C578F1E857132006170C7 /* DispatcherIllegalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatcherIllegalTests.swift; sourceTree = "<group>"; };
 		A14C57921E860B64006170C7 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -109,9 +129,7 @@
 		A14C57941E860B64006170C7 /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		A14C57951E860B64006170C7 /* DispatchStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchStatus.swift; sourceTree = "<group>"; };
 		A14C57961E860B64006170C7 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		A14C57A21E8618D7006170C7 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		A14C57A71E862004006170C7 /* MapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTests.swift; sourceTree = "<group>"; };
-		A14C57A91E862583006170C7 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		A14C57AC1E86263D006170C7 /* FilterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +160,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1815ACB31E9CB8EC002EFFB9 /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				1815ACB41E9CB8EC002EFFB9 /* Disposable */,
+				1815ACB91E9CB8EC002EFFB9 /* Observable */,
+				1815ACBE1E9CB8EC002EFFB9 /* Operator */,
+			);
+			path = Reactive;
+			sourceTree = "<group>";
+		};
+		1815ACB41E9CB8EC002EFFB9 /* Disposable */ = {
+			isa = PBXGroup;
+			children = (
+				1815ACB51E9CB8EC002EFFB9 /* BlockDisposable.swift */,
+				1815ACB61E9CB8EC002EFFB9 /* CompositeDisposable.swift */,
+				1815ACB71E9CB8EC002EFFB9 /* Disposable.swift */,
+				1815ACB81E9CB8EC002EFFB9 /* DisposeBag.swift */,
+			);
+			path = Disposable;
+			sourceTree = "<group>";
+		};
+		1815ACB91E9CB8EC002EFFB9 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				1815ACBA1E9CB8EC002EFFB9 /* AnyObservable.swift */,
+				1815ACBB1E9CB8EC002EFFB9 /* ConnectableObservable.swift */,
+				1815ACBC1E9CB8EC002EFFB9 /* Observable.swift */,
+				1815ACBD1E9CB8EC002EFFB9 /* ObservableValue.swift */,
+				1815ACCF1E9CC286002EFFB9 /* ColdObservable.swift */,
+				1815ACD11E9CC2FF002EFFB9 /* Observer.swift */,
+				18A218311E9F317600671527 /* Publishable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		1815ACBE1E9CB8EC002EFFB9 /* Operator */ = {
+			isa = PBXGroup;
+			children = (
+				1815ACBF1E9CB8EC002EFFB9 /* Filter.swift */,
+				1815ACC01E9CB8EC002EFFB9 /* Map.swift */,
+				1815ACC11E9CB8EC002EFFB9 /* RefCount.swift */,
+				1815ACC21E9CB8EC002EFFB9 /* Render.swift */,
+			);
+			path = Operator;
+			sourceTree = "<group>";
+		};
 		18D394B11E80D8FB0068E37D = {
 			isa = PBXGroup;
 			children = (
@@ -178,8 +242,8 @@
 		18D394F11E80F24E0068E37D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1815ACB31E9CB8EC002EFFB9 /* Reactive */,
 				A14C57911E860B64006170C7 /* Flux */,
-				18D3953C1E8104980068E37D /* Observable */,
 				18D395261E80F33E0068E37D /* Fluxer.h */,
 				18D395271E80F33E0068E37D /* Info.plist */,
 			);
@@ -196,30 +260,6 @@
 				18D3951A1E80F31F0068E37D /* Info.plist */,
 			);
 			path = FluxerTests;
-			sourceTree = "<group>";
-		};
-		18D3953C1E8104980068E37D /* Observable */ = {
-			isa = PBXGroup;
-			children = (
-				A14C57A11E8618CF006170C7 /* Operator */,
-				18D395471E8106B90068E37D /* Disposable */,
-				18D3953D1E8104980068E37D /* ObservableValue.swift */,
-				18D395451E81064C0068E37D /* Render.swift */,
-				18D3954E1E8106C70068E37D /* Observable.swift */,
-				18D395561E810B960068E37D /* AnyObservable.swift */,
-			);
-			path = Observable;
-			sourceTree = "<group>";
-		};
-		18D395471E8106B90068E37D /* Disposable */ = {
-			isa = PBXGroup;
-			children = (
-				18D395481E8106B90068E37D /* BlockDisposable.swift */,
-				18D395491E8106B90068E37D /* CompositeDisposable.swift */,
-				18D3954A1E8106B90068E37D /* Disposable.swift */,
-				18D395671E8123270068E37D /* DisposeBag.swift */,
-			);
-			path = Disposable;
 			sourceTree = "<group>";
 		};
 		18D3955A1E8113130068E37D /* Dispatcher */ = {
@@ -247,6 +287,9 @@
 				A14C57A61E861FF8006170C7 /* Operator */,
 				18D395611E8116810068E37D /* ObservableValueTests.swift */,
 				18D395631E8117300068E37D /* RenderTests.swift */,
+				1815ACD31E9CC582002EFFB9 /* ConnectableObservableTests.swift */,
+				1815ACD91E9CC94B002EFFB9 /* ColdObservableTests.swift */,
+				18A218331E9F31DA00671527 /* PublishTests.swift */,
 			);
 			path = Observable;
 			sourceTree = "<group>";
@@ -263,20 +306,12 @@
 			path = Flux;
 			sourceTree = "<group>";
 		};
-		A14C57A11E8618CF006170C7 /* Operator */ = {
-			isa = PBXGroup;
-			children = (
-				A14C57A21E8618D7006170C7 /* Map.swift */,
-				A14C57A91E862583006170C7 /* Filter.swift */,
-			);
-			path = Operator;
-			sourceTree = "<group>";
-		};
 		A14C57A61E861FF8006170C7 /* Operator */ = {
 			isa = PBXGroup;
 			children = (
 				A14C57A71E862004006170C7 /* MapTests.swift */,
 				A14C57AC1E86263D006170C7 /* FilterTests.swift */,
+				1815ACD71E9CC7B4002EFFB9 /* RefCountTests.swift */,
 			);
 			path = Operator;
 			sourceTree = "<group>";
@@ -436,21 +471,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D3954F1E8106C70068E37D /* Observable.swift in Sources */,
-				A14C57AB1E86259E006170C7 /* Filter.swift in Sources */,
 				A14C579C1E860C84006170C7 /* Action.swift in Sources */,
-				18D395691E81232B0068E37D /* DisposeBag.swift in Sources */,
+				1815ACC81E9CB8EC002EFFB9 /* ConnectableObservable.swift in Sources */,
+				1815ACC51E9CB8EC002EFFB9 /* Disposable.swift in Sources */,
+				1815ACC61E9CB8EC002EFFB9 /* DisposeBag.swift in Sources */,
+				1815ACC91E9CB8EC002EFFB9 /* Observable.swift in Sources */,
 				A14C579F1E860C8E006170C7 /* DispatchStatus.swift in Sources */,
-				18D3954C1E8106B90068E37D /* CompositeDisposable.swift in Sources */,
-				18D395571E810B960068E37D /* AnyObservable.swift in Sources */,
-				18D3954B1E8106B90068E37D /* BlockDisposable.swift in Sources */,
 				A14C57A01E860C91006170C7 /* Store.swift in Sources */,
-				18D3953E1E8104980068E37D /* ObservableValue.swift in Sources */,
+				1815ACCE1E9CB8EC002EFFB9 /* Render.swift in Sources */,
+				1815ACD01E9CC286002EFFB9 /* ColdObservable.swift in Sources */,
+				1815ACD21E9CC2FF002EFFB9 /* Observer.swift in Sources */,
+				1815ACCB1E9CB8EC002EFFB9 /* Filter.swift in Sources */,
+				1815ACC31E9CB8EC002EFFB9 /* BlockDisposable.swift in Sources */,
 				A14C579E1E860C8B006170C7 /* Dispatcher.swift in Sources */,
-				A14C57A31E8618D7006170C7 /* Map.swift in Sources */,
-				18D395461E81064C0068E37D /* Render.swift in Sources */,
+				1815ACCC1E9CB8EC002EFFB9 /* Map.swift in Sources */,
+				1815ACCA1E9CB8EC002EFFB9 /* ObservableValue.swift in Sources */,
+				18A218321E9F317600671527 /* Publishable.swift in Sources */,
+				1815ACC71E9CB8EC002EFFB9 /* AnyObservable.swift in Sources */,
 				A14C579D1E860C87006170C7 /* ActionHandler.swift in Sources */,
-				18D3954D1E8106B90068E37D /* Disposable.swift in Sources */,
+				1815ACC41E9CB8EC002EFFB9 /* CompositeDisposable.swift in Sources */,
+				1815ACCD1E9CB8EC002EFFB9 /* RefCount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,13 +501,17 @@
 				18D395641E8117300068E37D /* RenderTests.swift in Sources */,
 				18D395191E80F31F0068E37D /* FluxerTests.swift in Sources */,
 				A14C57A81E862004006170C7 /* MapTests.swift in Sources */,
+				18A218341E9F31DA00671527 /* PublishTests.swift in Sources */,
 				18D395661E81193F0068E37D /* DispatcherTests.swift in Sources */,
 				A14C57901E857132006170C7 /* DispatcherIllegalTests.swift in Sources */,
 				A14C57AD1E86263D006170C7 /* FilterTests.swift in Sources */,
 				18D3955E1E81131E0068E37D /* BlockDisposableTests.swift in Sources */,
+				1815ACD41E9CC582002EFFB9 /* ConnectableObservableTests.swift in Sources */,
+				1815ACDA1E9CC94B002EFFB9 /* ColdObservableTests.swift in Sources */,
 				18D3956B1E8123DF0068E37D /* DisposeBagTests.swift in Sources */,
 				18D395621E8116810068E37D /* ObservableValueTests.swift in Sources */,
 				18D395601E8114C80068E37D /* CompositeDisposableTests.swift in Sources */,
+				1815ACD81E9CC7B4002EFFB9 /* RefCountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

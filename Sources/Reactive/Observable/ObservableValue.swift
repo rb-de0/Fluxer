@@ -8,22 +8,16 @@
 
 public class ObservableValue<T>: Observable {
     
-    private var _value: T
-    
-    private var subscriptions = [String: ((T) -> ())]()
+    fileprivate var subscriptions = [String: ((T) -> ())]()
     
     public var value: T {
-        get {
-            return _value
-        }
-        set(newValue) {
-            _value = newValue
-            subscriptions.values.forEach { $0(newValue) }
+        didSet {
+            subscriptions.values.forEach { $0(value) }
         }
     }
     
     public init(_ value: T) {
-        self._value = value
+        self.value = value
     }
     
     public func subscribe(_ onUpdateValue: @escaping (T) -> ()) -> Disposable {
@@ -34,5 +28,13 @@ public class ObservableValue<T>: Observable {
         return BlockDisposable { [weak self] in
             self?.subscriptions[token] = nil
         }
+    }
+}
+
+// MARK: - Publishable
+extension ObservableValue: Publishable {
+    
+    func publish() {
+        subscriptions.values.forEach { $0(value) }
     }
 }
