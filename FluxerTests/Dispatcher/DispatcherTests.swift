@@ -21,6 +21,20 @@ class DispatcherTests: XCTestCase {
     
     class Test2Action: Action {}
     
+    class TestAsyncAction: AsyncAction {
+        
+        let expect: XCTestExpectation
+        
+        init(_ expect: XCTestExpectation) {
+            self.expect = expect
+        }
+        
+        func exec(callback: @escaping Dispatcher.AsyncActionCallback) {
+            callback(TestAction())
+            expect.fulfill()
+        }
+    }
+    
     func testHandlerCallOrder() {
         
         let dispatcher = Dispatcher()
@@ -168,6 +182,24 @@ class DispatcherTests: XCTestCase {
         waitForExpectations(timeout: 10, handler: nil)
         
         XCTAssertEqual(store.value, 10)
+    }
+    
+    func testAsyncAction() {
+        
+        let expectation = self.expectation(description: #function)
+        let dispatcher = Dispatcher()
+        let store = TestStore(with: dispatcher)
+        
+        _ = dispatcher.register { _ in
+            store.value = 10
+        }
+        
+        dispatcher.dispatch(TestAsyncAction(expectation))
+        
+        waitForExpectations(timeout: 10, handler: nil)
+        
+        XCTAssertEqual(store.value, 10)
+
     }
     
     func testUnregister() {

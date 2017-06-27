@@ -47,6 +47,10 @@ public final class Dispatcher {
         }
     }
     
+    public func dispatch(_ asyncAction: AsyncAction) {
+        dispatch(asyncAction.exec)
+    }
+    
     public func waitFor(_ registrationTokens: [String], action: Action) {
         
         guard isDispatching else {
