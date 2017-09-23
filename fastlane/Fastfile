@@ -8,7 +8,7 @@ platform :ios do
   lane :test do
     scan(
       scheme: "Fluxer-Example",
-      devices: ["iPhone 7"]
+      devices: ["iPhone X"]
     )
     slather(
       proj: "Fluxer.xcodeproj",
