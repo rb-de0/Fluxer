@@ -12,8 +12,8 @@ Swift Flux Framework
 
 ## Requirements
 
-- Swift 3.1
-- Xcode 8.3.3
+- Swift 3.1 or lator
+- Xcode 8.3.3 or lator
 - iOS 9.0 or later
 
 ## Installation
