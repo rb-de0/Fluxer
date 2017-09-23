@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Fluxer"
-  s.version          = "1.3.1"
+  s.version          = "1.4.0"
   s.summary          = "Swift Flux Micro Framework"
 
   s.homepage         = "https://github.com/rb-de0/Fluxer"
